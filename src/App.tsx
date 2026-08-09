@@ -337,259 +337,84 @@ export default function App() {
       )}
 
       {/* =========================================================
-          TOP BAR
-      ========================================================= */}
-      <div
-        style={{
-          background: '#e91e8c',
-          color: 'white',
-          textAlign: 'center',
-          padding: '8px 16px',
-          fontSize: 13,
-          fontWeight: 600,
-        }}
-      >
-        🚚 Frete Grátis com cupom&nbsp; • &nbsp;💳 Parcele em até 12x
-        &nbsp; • &nbsp;🔒 Compra Segura Shopee
-      </div>
+    TOP BAR — MARQUEE INFINITO
+========================================================= */}
+<div
+  style={{
+    background: '#e91e8c',
+    color: 'white',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    position: 'relative',
+    width: '100%',
+    padding: '9px 0',
+  }}
+>
+  <div
+    style={{
+      display: 'flex',
+      width: 'max-content',
+      animation: 'topbar-marquee 18s linear infinite',
+    }}
+  >
+    {/* BLOCO 1 */}
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 18,
+        paddingRight: 18,
+        fontSize: 13,
+        fontWeight: 700,
+      }}
+    >
+      <span>🚚 Frete Grátis com cupom</span>
+      <span style={{ opacity: 0.7 }}>•</span>
+      <span>💳 Parcele em até 12x</span>
+      <span style={{ opacity: 0.7 }}>•</span>
+      <span>🔒 Compra Segura Shopee</span>
+      <span style={{ opacity: 0.7 }}>•</span>
+    </div>
 
-      {/* =========================================================
-          HERO
-      ========================================================= */}
-      <section
-        style={{
-          background:
-            'linear-gradient(160deg, #fde8f4 0%, #dbeafe 100%)',
-          padding: '40px 16px 48px',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: 560,
-            margin: '0 auto',
-            textAlign: 'center',
-          }}
-        >
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 8,
-              background: 'white',
-              borderRadius: 999,
-              padding: '6px 16px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-              marginBottom: 24,
-            }}
-          >
-            <img
-              src={product1kg}
-              alt="Calisul"
-              style={{
-                width: 28,
-                height: 28,
-                objectFit: 'contain',
-              }}
-            />
+    {/* BLOCO 2 — DUPLICADO PARA LOOP PERFEITO */}
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 18,
+        paddingRight: 18,
+        fontSize: 13,
+        fontWeight: 700,
+      }}
+    >
+      <span>🚚 Frete Grátis com cupom</span>
+      <span style={{ opacity: 0.7 }}>•</span>
+      <span>💳 Parcele em até 12x</span>
+      <span style={{ opacity: 0.7 }}>•</span>
+      <span>🔒 Compra Segura Shopee</span>
+      <span style={{ opacity: 0.7 }}>•</span>
+    </div>
 
-            <span
-              style={{
-                fontWeight: 800,
-                fontSize: 13,
-                color: '#e91e8c',
-                letterSpacing: 1,
-              }}
-            >
-              CALISUL
-            </span>
-
-            <span
-              style={{
-                color: '#9ca3af',
-                fontSize: 11,
-                fontWeight: 600,
-              }}
-            >
-              PERCARBONATO DE SÓDIO
-            </span>
-          </div>
-
-          <h1
-            style={{
-              fontSize: 'clamp(26px, 6vw, 44px)',
-              fontFamily: "'Fraunces', serif",
-              fontWeight: 900,
-              lineHeight: 1.15,
-              marginBottom: 16,
-              color: '#1a1a2e',
-            }}
-          >
-            A Solução que Está Devolvendo a Vida às Roupas Manchadas —{' '}
-            <span style={{ color: '#e91e8c' }}>
-              Sem Cloro e Sem Esfregar.
-            </span>
-          </h1>
-
-          <p
-            style={{
-              fontSize: 16,
-              color: '#4b5563',
-              marginBottom: 12,
-              lineHeight: 1.65,
-            }}
-          >
-            O <strong>Percarbonato de Sódio Calisul</strong> usa
-            oxigênio ativo para ajudar a remover manchas de café,
-            suor, comida e muito mais — em roupas brancas e
-            coloridas.
-          </p>
-
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: 16,
-              marginBottom: 24,
-              flexWrap: 'wrap',
-            }}
-          >
-            <span
-              style={{
-                fontSize: 13,
-                color: '#6b7280',
-                fontWeight: 600,
-              }}
-            >
-              ⭐⭐⭐⭐⭐{' '}
-              <strong style={{ color: '#1a1a2e' }}>4.9</strong> na
-              Shopee
-            </span>
-
-            <span style={{ color: '#e5e7eb' }}>|</span>
-
-            <span
-              style={{
-                fontSize: 13,
-                color: '#6b7280',
-                fontWeight: 600,
-              }}
-            >
-              🏆 Mais Vendido em Percarbonato
-            </span>
-
-            <span style={{ color: '#e5e7eb' }}>|</span>
-
-            <span
-              style={{
-                fontSize: 13,
-                color: '#6b7280',
-                fontWeight: 600,
-              }}
-            >
-              🚚 Frete Grátis
-            </span>
-          </div>
-
-          {/* VIDEO */}
-          <div
-            style={{
-              borderRadius: 16,
-              overflow: 'hidden',
-              boxShadow: '0 8px 40px rgba(0,0,0,0.18)',
-              background: '#000',
-              marginBottom: 28,
-              position: 'relative',
-            }}
-          >
-            <div
-              style={{
-                position: 'absolute',
-                top: 10,
-                left: 10,
-                background: '#e91e8c',
-                color: 'white',
-                borderRadius: 999,
-                padding: '4px 12px',
-                fontSize: 11,
-                fontWeight: 700,
-                zIndex: 1,
-                pointerEvents: 'none',
-              }}
-            >
-              ▶ ASSISTA ANTES DE COMPRAR
-            </div>
-
-            <video
-              src={vslVideo}
-              controls
-              playsInline
-              preload="metadata"
-              poster={product1kg}
-              style={{
-                display: 'block',
-                width: '100%',
-                maxHeight: 340,
-                objectFit: 'cover',
-              }}
-            />
-          </div>
-
-          <a
-            href={AFFILIATE}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'block',
-              width: '100%',
-              background:
-                'linear-gradient(135deg, #e91e8c, #c0157a)',
-              color: 'white',
-              fontWeight: 800,
-              fontSize: 18,
-              padding: '18px 24px',
-              borderRadius: 999,
-              textDecoration: 'none',
-              textTransform: 'uppercase',
-              letterSpacing: 1,
-              boxShadow: '0 4px 24px rgba(233,30,140,0.45)',
-            }}
-          >
-            🛒 Quero Comprar na Shopee
-          </a>
-
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-              gap: 10,
-              marginTop: 16,
-            }}
-          >
-            {[
-              '🔒 Compra Segura',
-              '🚚 Frete Grátis',
-              '💳 12x sem juros',
-              '📱 Pix com desconto',
-            ].map((text) => (
-              <span
-                key={text}
-                style={{
-                  background: 'white',
-                  borderRadius: 999,
-                  padding: '5px 12px',
-                  fontSize: 12,
-                  fontWeight: 600,
-                  color: '#4b5563',
-                  boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
-                }}
-              >
-                {text}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+    {/* BLOCO 3 — EVITA ESPAÇO VAZIO EM TELAS GRANDES */}
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 18,
+        paddingRight: 18,
+        fontSize: 13,
+        fontWeight: 700,
+      }}
+    >
+      <span>🚚 Frete Grátis com cupom</span>
+      <span style={{ opacity: 0.7 }}>•</span>
+      <span>💳 Parcele em até 12x</span>
+      <span style={{ opacity: 0.7 }}>•</span>
+      <span>🔒 Compra Segura Shopee</span>
+      <span style={{ opacity: 0.7 }}>•</span>
+    </div>
+  </div>
+</div>
 
       {/* =========================================================
           BENEFITS
