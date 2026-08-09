@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 
-@theme {
+:root {
   --color-pink-brand: #e91e8c;
   --color-pink-light: #fde8f4;
   --color-pink-mid: #f472b6;
