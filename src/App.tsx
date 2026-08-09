@@ -339,29 +339,19 @@ export default function App() {
       {/* =========================================================
           TOP BAR
       ========================================================= */}
-      <div className="top-bar">
-  <div className="top-bar-track">
-
-    <div className="top-bar-content">
-      🚚 Frete Grátis com cupom
-      &nbsp; • &nbsp;
-      💳 Parcele em até 12x
-      &nbsp; • &nbsp;
-      🔒 Compra Segura Shopee
-      &nbsp; • &nbsp;
-    </div>
-
-    <div className="top-bar-content">
-      🚚 Frete Grátis com cupom
-      &nbsp; • &nbsp;
-      💳 Parcele em até 12x
-      &nbsp; • &nbsp;
-      🔒 Compra Segura Shopee
-      &nbsp; • &nbsp;
-    </div>
-
-  </div>
-</div>
+      <div
+        style={{
+          background: '#e91e8c',
+          color: 'white',
+          textAlign: 'center',
+          padding: '8px 16px',
+          fontSize: 13,
+          fontWeight: 600,
+        }}
+      >
+        🚚 Frete Grátis com cupom&nbsp; • &nbsp;💳 Parcele em até 12x
+        &nbsp; • &nbsp;🔒 Compra Segura Shopee
+      </div>
 
       {/* =========================================================
           HERO
