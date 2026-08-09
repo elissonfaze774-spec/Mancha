@@ -170,40 +170,46 @@ export default function App() {
      */
 
     .top-bar {
-      width: 100%;
-      overflow: hidden;
-      background: #e91e8c;
-      color: #fff;
-      white-space: nowrap;
-      position: relative;
-      z-index: 50;
-    }
+  width: 100%;
+  height: 38px;
+  overflow: hidden;
+  background: #e91e8c;
+  color: #fff;
+  position: relative;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+}
 
-    .top-bar-track {
-      display: flex;
-      width: max-content;
-      animation: topBarMove 24s linear infinite;
-      will-change: transform;
-    }
+.top-bar-track {
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+  animation: topBarMove 18s linear infinite;
+  will-change: transform;
+}
 
-    .top-bar-content {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      padding: 9px 28px;
-      font-size: 13px;
-      font-weight: 700;
-    }
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 9px 28px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
-    @keyframes topBarMove {
-      from {
-        transform: translateX(0);
-      }
+/* Direita → esquerda */
+@keyframes topBarMove {
+  from {
+    transform: translateX(0);
+  }
 
-      to {
-        transform: translateX(-50%);
-      }
-    }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
     /*
      * ==========================================================
@@ -889,41 +895,30 @@ export default function App() {
         ===================================================== */}
 
         <div className="top-bar">
-          <div className="top-bar-track">
+  <div className="top-bar-track">
 
-            <div className="top-bar-content">
-              <span>🚚 Frete Grátis com cupom</span>
-              <span>•</span>
-              <span>💳 Parcele em até 12x</span>
-              <span>•</span>
-              <span>🔒 Compra Segura Shopee</span>
-              <span>•</span>
-              <span>🚚 Frete Grátis com cupom</span>
-              <span>•</span>
-              <span>💳 Parcele em até 12x</span>
-              <span>•</span>
-              <span>🔒 Compra Segura Shopee</span>
-            </div>
+    {/* BLOCO 1 */}
+    <div className="top-bar-content">
+      <span>🚚 Frete Grátis com cupom</span>
+      <span>•</span>
+      <span>💳 Parcele em até 12x</span>
+      <span>•</span>
+      <span>🔒 Compra Segura Shopee</span>
+      <span>•</span>
+    </div>
 
-            <div
-              className="top-bar-content"
-              aria-hidden="true"
-            >
-              <span>🚚 Frete Grátis com cupom</span>
-              <span>•</span>
-              <span>💳 Parcele em até 12x</span>
-              <span>•</span>
-              <span>🔒 Compra Segura Shopee</span>
-              <span>•</span>
-              <span>🚚 Frete Grátis com cupom</span>
-              <span>•</span>
-              <span>💳 Parcele em até 12x</span>
-              <span>•</span>
-              <span>🔒 Compra Segura Shopee</span>
-            </div>
+    {/* BLOCO 2 - DUPLICADO PARA LOOP INFINITO */}
+    <div className="top-bar-content" aria-hidden="true">
+      <span>🚚 Frete Grátis com cupom</span>
+      <span>•</span>
+      <span>💳 Parcele em até 12x</span>
+      <span>•</span>
+      <span>🔒 Compra Segura Shopee</span>
+      <span>•</span>
+    </div>
 
-          </div>
-        </div>
+  </div>
+</div>
 
         {/* =====================================================
             HERO
