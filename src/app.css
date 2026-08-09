@@ -1,0 +1,51 @@
+/* =========================================
+   BARRA SUPERIOR - ANIMAÇÃO INFINITA
+========================================= */
+
+.top-bar {
+  width: 100%;
+  overflow: hidden;
+  background: #e91e8c;
+  color: white;
+  padding: 8px 0;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.top-bar-track {
+  display: flex;
+  width: max-content;
+  animation: topBarScroll 18s linear infinite;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-right: 50px;
+}
+
+@keyframes topBarScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Movimento um pouco mais rápido no celular */
+@media (max-width: 600px) {
+  .top-bar-track {
+    animation-duration: 12s;
+  }
+}
+
+/* Respeita usuários que preferem menos animação */
+@media (prefers-reduced-motion: reduce) {
+  .top-bar-track {
+    animation: none;
+  }
+}
